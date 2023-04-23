@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "26445b6d-7b4d-4f66-b662-d5423053dc36",
+		"name": "Learn TLU NVC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17535937"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "1. Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Trần Đăng Khoa\",\r\n    \"password\":\"0091923\",\r\n    \"email\":\"khoa123@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/user/create"
+					},
+					"response": []
+				},
+				{
+					"name": "2. Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"khoa123@gmail.com\",\r\n    \"password\": \"0091923\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/user/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cource",
+			"item": [
+				{
+					"name": "1. Create Cource",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"author\": \"Ths. Trần Đăng Khoa\",\r\n    \"major\": \"Excel\",\r\n    \"nameCource\": \"Excel cơ bản\",\r\n    \"img\": \"https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Microsoft_Excel_2013-2019_logo.svg/2086px-Microsoft_Excel_2013-2019_logo.svg.png\",\r\n    \"summaryCource\": \"Ứng dụng thành thạo 150 hàm Excel, Pivot Table, kỹ thuật lọc, định dạng dữ liệu, vẽ biểu đồ chuyên nghiệp...vào công việc\\nHình thành và phát triển tư duy tổ chức, xử lý dữ liệu khoa học\\nRèn luyện kỹ năng báo cáo theo các công việc cụ thể để sử dụng Excel thành thạo, đáp ứng tiêu chuẩn về kỹ năng Excel của các doanh nghiệp, tập đoàn Tự xây dựng hệ thống báo cáo động, hệ thống quản trị chuyên nghiệp để đo lường hiệu quả công việc Có chuyên gia Excel bên cạnh 24/7 để hỏi khi cần\\nĐược làm quen với công việc thực tế tại các tập đoàn, doanh nghiệp lớn\\nCơ hội thăng tiến lên vị trí Quản lý, phát triển sự nghiệp nhanh chóng\\nTiết kiệm chi phí và thời gian so với học offline, thời gian học linh hoạt Vượt qua các kỳ thi cấp chứng nhận năng lực\",\r\n    \"videoThumbnail\": \"https://www.microsoft.com/en-us/videoplayer/embed/RWfBN5?pid=ocpVideo1-innerdiv-oneplayer&maskLevel=20&market=en-us\",\r\n    \"idCource\": \"COURCE00001D11200\",\r\n    \"courses\": null,\r\n    \"level\": \"BASIC\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3001/api/cource/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Cource",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3001/api/cource"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "First connect",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3001/api/hello"
+			},
+			"response": []
+		}
+	]
+}
